@@ -265,13 +265,13 @@ class BucketNotificationConfiguration(base.BaseResource):
 
     def get_bucket_arn(self):
         bucket = self.settings.get('bucket')
-        if bucket.startswith('arn:aws:'):
+        if isinstance(bucket, str) and bucket.startswith('arn:aws:'):
             return bucket
         return troposphere.Join("", ["arn:aws:s3:::", bucket])
 
     def get_bucket_name(self):
         bucket = self.settings.get('bucket')
-        if bucket.startswith('arn:aws:'):
+        if isinstance(bucket, str) and bucket.startswith('arn:aws:'):
             return bucket.rsplit(':', 1)[1]
         return bucket
 
