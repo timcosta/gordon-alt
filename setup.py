@@ -17,12 +17,12 @@ if sys.version_info < (2, 7):
 
 
 setup(
-    name='gordon',
-    version='0.2.1',
-    url='http://github.com/jorgebastida/gordon',
+    name='gordon-alt',
+    version='0.2.2',
+    url='http://github.com/tjsail33/gordon-alt',
     license='BSD',
-    author='Jorge Bastida',
-    author_email='me@jorgebastida.com',
+    author='Tim Costa',
+    author_email='tjsail33@gmail.com',
     description='Gordon is a tool to create, wire and deploy AWS Lambdas using CloudFormation',
     keywords="aws lambda apigateway kinesis dynamodb s3 cloudwatch",
     packages=find_packages(),
